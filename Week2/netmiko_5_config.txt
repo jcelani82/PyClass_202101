@@ -1,0 +1,24 @@
+vlan 110
+name RM_110
+state active
+no shutdown
+!
+vlan 120
+name RM_120
+state active
+no shutdown
+!
+vlan 130
+name RM_130
+state active
+no shutdown
+!
+vlan 140
+name RM_140
+state active
+no shutdown
+!
+vlan 150
+name RM_150
+state active
+no shutdown
