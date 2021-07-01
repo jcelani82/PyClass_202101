@@ -1,0 +1,7 @@
+{%- for number in range(1, 3) %}
+nxos{{ number }}
+interface {{ sw_int }}
+  ip address 10.1.100.{{ number }}/{{ sw_netmask }}
+!
+!
+{%- endfor %}

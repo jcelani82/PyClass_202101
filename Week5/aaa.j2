@@ -1,0 +1,12 @@
+aaa new-model
+!
+!
+aaa authentication login {{ login_server }}
+aaa authorization exec {{ login_server }} if-authenticated 
+!
+!
+!
+!
+!
+!
+aaa session-id common

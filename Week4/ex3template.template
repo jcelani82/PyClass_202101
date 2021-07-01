@@ -1,0 +1,16 @@
+Value INTERFACE (\S+)
+Value LINE_STATUS (up|down) 
+Value ADMIN_STATE (up|down)
+Value MAC_ADD (\S{4}\.\S{4}\.\S{4})
+Value MTU (\d{2,4})
+Value DUPLEX (half|full)
+Value SPEED (\d+)
+
+Start 
+  ^${INTERFACE} is ${LINE_STATUS} ->
+  ^admin state is ${ADMIN_STATE},\s ->
+  ^.*bia ${MAC_ADD} -> 
+  ^\s\sMTU ${MTU}\s -> 
+  ^\s\s${DUPLEX}-duplex,\s+${SPEED} Mb/s -> Record
+
+EOF

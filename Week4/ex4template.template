@@ -1,0 +1,13 @@
+Value MAC_ADD (\S{2}:\S{2}:\S{2}:\S{2}:\S{2}:\S{2})
+Value IP_ADDR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value NAME (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value INTERFACE (\S+)
+
+Start
+  ^MAC.*Flags$$ -> ShowARP
+
+ShowARP
+  ^${MAC_ADD}\s+${IP_ADDR}\s+${NAME}\s+${INTERFACE} -> Record
+
+EOF
+

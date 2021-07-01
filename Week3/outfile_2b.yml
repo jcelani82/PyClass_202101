@@ -1,0 +1,16 @@
+- device_type: cisco_ios
+  host: cisco3.lasthop.io
+  password: test
+  username: test
+- device_type: cisco_ios
+  host: cisco4.lasthop.io
+  password: test
+  username: test
+- device_type: cisco_nxos
+  host: nxos1.lasthop.io
+  password: test
+  username: test
+- device_type: cisco_nxos
+  host: nxos2.lasthop.io
+  password: test
+  username: test
